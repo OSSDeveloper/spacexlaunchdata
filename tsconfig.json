@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "esModuleInterop": true,
+        "lib": [
+            "esnext"
+        ],
+        "module": "esnext",
+        "moduleResolution": "deno",
+        "baseUrl": ".",
+        "paths": {
+            "http://*": [
+                ".../deno/deps/http/*"
+            ],
+            "https://*": [
+                ".../deno/deps/https/*"
+            ],
+        },
+        "plugins": [
+            {
+                "name": "typescript-deno-plugin",
+                "enable": true, // default is `true`
+                "importmap": "import_map.json"
+            }
+        ],
+        "noEmit": true,
+        "pretty": true,
+        "resolveJsonModule": true,
+        "target": "esnext"
+    },
+    "include": [
+        "./**/*.ts"
+    ]
+}
